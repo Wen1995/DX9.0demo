@@ -6,29 +6,25 @@
 struct XYZVertex
 {
 	float x, y, z;
-	XYZVertex(int x, int y, int z) : x(x), y(y), z(z)
+	XYZVertex(float x, float y, float z) : x(x), y(y), z(z)
 	{}
 	XYZVertex() : x(0), y(0), z(0)
 	{}
-	static const DWORD FVF;
+	static const DWORD FVF = D3DFVF_XYZ;
 };
-const DWORD XYZVertex::FVF = D3DFVF_XYZ;
 
 struct ColorVertex
 {
 	float x, y, z;
 	DWORD color;
-	static const DWORD FVF;
+	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
 };
-const DWORD ColorVertex::FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
 
-typedef struct NormalTexVertex
+struct NormalTexVertex
 {
 	float x, y, z;
 	float nx, ny, nz;	//·¨Ïß
 	float u, v;
-	static const DWORD FVF;
+	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
 };
-const DWORD NormalTexVertex::FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
 
-//
