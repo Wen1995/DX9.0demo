@@ -16,7 +16,7 @@ struct XYZVertex
 struct ColorVertex
 {
 	float x, y, z;
-	DWORD color;
+	D3DCOLOR color;
 	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
 };
 
