@@ -20,11 +20,23 @@ struct ColorVertex
 	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
 };
 
+
+struct NormalVertex
+{
+	float x, y, z;
+	float nx, ny, nz;
+	NormalVertex(float x, float y, float z, float nx, float ny, float nz): x(x), y(y), z(z), nx(nx), ny(ny), nz(nz)
+	{}
+	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_NORMAL;
+};
+
 struct NormalTexVertex
 {
 	float x, y, z;
 	float nx, ny, nz;	//·¨Ïß
 	float u, v;
+	NormalTexVertex(float x, float y, float z, float nx, float ny, float nz, float u, float v) :x(x), y(y), z(z), nx(nx), ny(ny), nz(nz), u(u), v(v)
+	{}
 	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
 };
 
