@@ -39,4 +39,3 @@ struct NormalTexVertex
 	{}
 	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
 };
-
