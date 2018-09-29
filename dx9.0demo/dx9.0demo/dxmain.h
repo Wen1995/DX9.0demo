@@ -17,9 +17,10 @@ struct ColorVertex
 {
 	float x, y, z;
 	D3DCOLOR color;
+	ColorVertex(float x, float y, float z, D3DCOLOR color) : x(x), y(y), z(z), color(color)
+	{}
 	static const DWORD FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
 };
-
 
 struct NormalVertex
 {

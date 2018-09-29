@@ -473,7 +473,7 @@ typedef struct D3DXPLANE
 #ifdef __cplusplus
 public:
     D3DXPLANE() {}
-    D3DXPLANE( CONST FLOAT* );
+	D3DXPLANE(CONST FLOAT*);
     D3DXPLANE( CONST D3DXFLOAT16* );
     D3DXPLANE( FLOAT a, FLOAT b, FLOAT c, FLOAT d );
 
